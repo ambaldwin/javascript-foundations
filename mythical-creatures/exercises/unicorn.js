@@ -1,8 +1,18 @@
 class Unicorn {
-  constructor(name, color) {
+  constructor(name, color, words) {
     this.name = name;
-    this.color = color;
+    this.color = color ? color : 'white';
   }
+
+  isWhite(color) {
+    return Boolean(color === 'white');
+  }
+
+  says(words) {
+    return `**;* ${words} *;**`;
+  }
+
+
 }
 
 module.exports = Unicorn;
